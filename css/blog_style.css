@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1dd8a0;
+    --secondary-color: #3b82f6;
+    --main-color: #347ce7;
+    --alt-color: #31c2af;
+    --social-links: #f8fafc;
+    --accent-color: #60a5fa;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+* {box-sizing: border-box;}
+
+.blog-container {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 2100px;
+    margin: 0 auto;
+}
+
+.blog-container h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.blog-container > p {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.blog-card {
+    background: var(--card-bg);
+    padding: 0.5rem 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 650px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, var(--main-color), var(--alt-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.blog-card:hover::before {
+    transform: scaleX(1);
+}
+
+.blog-card h3 {
+    color: var(--main-color);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.blog-card h4 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.blog-card p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.nut p{
+    margin-bottom: 4rem;
+}
+
+.bottom-right { 
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    left: 15px;
+    bottom: 10px;
+    right: 15px;  
+    opacity: 0.5;
+} 
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--main-color), var(--alt-color));
+    color: white;
+    border: white;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: var(--transition-fast);
+    box-shadow: var(--shadow-md);
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background: transparent;
+    border: 2px solid #3188c2;
+    color:#3188c2;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .blog-container h1 {
+        font-size: 2rem;
+    }
+
+    .blog-container > p {
+        font-size: 1.1rem;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-card {
+        padding: 1.5rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-section p i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+}

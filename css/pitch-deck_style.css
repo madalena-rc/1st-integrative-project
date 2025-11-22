@@ -1,0 +1,186 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1dd8a0;
+    --secondary-color: #3b82f6;
+    --main-color: #347ce7;
+    --alt-color: #31c2af;
+    --social-links: #f8fafc;
+    --accent-color: #60a5fa;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+* {box-sizing: border-box;}
+
+.proposal-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.proposal-section .container {
+    text-align: center;
+}
+
+.proposal-section h1 {
+    font-size: 3rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.proposal-section > p {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    padding-top: 1rem;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.slides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/*Position prev button to the right*/
+.prev{
+    left: 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover {
+    background: linear-gradient(45deg, #347ce7b9, #31c2af);
+}
+
+.next:hover {
+    background: linear-gradient(45deg, #347ce7b9, #31c2af);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #5c9dffb9;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+/*
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background: #7aafff98;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background: #3a7ee4cb;
+}
+*/
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .proposal-section h1 {
+        font-size: 2rem;
+    }
+
+    .proposal-section > p {
+        font-size: 1.1rem;
+    }
+
+    .pdf-container {
+        height: 600px;
+    }
+
+    .viewer-controls {
+        flex-direction: column;
+    }
+
+    .viewer-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-section p i {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+}

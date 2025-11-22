@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1dd8a0;
+    --secondary-color: #3b82f6;
+    --main-color: #347ce7;
+    --alt-color: #31c2af;
+    --social-links: #f8fafc;
+    --accent-color: #60a5fa;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --card-bg: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+* {box-sizing: border-box;}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    padding: 0;
+    width: auto;
+}
+
+.header img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.header img:hover {
+    transform: scale(1.05);
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.header nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+ /* The sidepanel menu */
+.sidepanel {
+    height: 225px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background: linear-gradient(90deg, #1EC9A9, #1DD7A1); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    margin-top: 5.7rem;
+    padding-top: 30px;
+    transition: width 0.3s ease;
+    white-space: nowrap;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    font-weight:600;
+    margin-left: 100px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.openbtn:hover + .sidepanel,
+.sidepanel:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 200px;
+    box-shadow: -4px 0 16px rgba(49, 194, 175, 0.15);
+}
+
+.sidepanel a:hover {
+    text-align: center;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 1.6rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.sidepanel a:active .openbtn:active{
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+/*END OF HEADER*/
+
+/*START OF FOOTER*/
+footer {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 3rem 0 0;
+}
+
+.footer-content {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: space-between;
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-section {
+    max-width: 30%;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color var(--transition-normal);
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.2rem;
+    transition: color var(--transition-normal);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section p i {
+    width: 20px;
+    color: var(--social-links);
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Utility Classes */
+.interactive {
+    position: relative;
+    cursor: pointer;
+}
+
+.interactive::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(205, 255, 247);
+    transform: scaleX(0);
+    transition: transform var(--transition-normal);
+}
+
+.interactive:hover::after {
+    transform: scaleX(1);
+}
+
+/* Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top var(--transition-normal);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #5a9cff, #69ffeb);
+    transform-origin: 0%;
+    transform: scaleX(0);
+    transition: transform var(--transition-fast);
+    z-index: 1001;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--main-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--alt-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* Dark Mode Support */
+/*
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1a1a1a;
+        --text-color: #ffffff;
+        --card-bg: #2d2d2d;
+    }
+}
+*/
