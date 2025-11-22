@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Insights from healthcare professionals and caregivers about the Vest project for low-risk hospital patients">
+    <link rel="stylesheet" href="../css/global_style.css">
+    <link rel="stylesheet" href="../css/questionnaire_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Questionnaire • MediVest</title>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+    <header class="header">
+        <a href="home.html"><img src="../images/ist_logo_white.png" alt="ist logo"></a>
+        <nav class="header-right">
+            <a href="home.html" class="interactive">Home</a>
+            <a href="about.html" class="interactive">About</a>
+            <a href="team.html" class="interactive">Team</a>
+            <a href="blog.html" class="interactive">Blog</a>
+            <a href="contact.html" class="interactive">Contact</a>
+            <div class="openbtn">&#9776;</div>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="interviews.html" class="interactive">Interviews</a>
+                <a href="questionnaire.html" class=" active interactive">Questionnaire</a>
+                <a href="pitch-deck.html" class="interactive">Pitch Deck</a>
+                <a href="gallery.html" class="interactive">Gallery</a>
+            </div>
+        </nav>
+    </header>
+    <section id="questionnaire" class="questionnaire-container">
+        <h1>Questionnaire Results</h1>
+        <p>Healthcare professionals, students and caregivers were asked to give their feedback on our project</p>
+
+        <div class="questionnaire-tabs">
+          <button class="tab-link active" onclick="openTab(event, 'section1')">Professionals</button>
+          <button class="tab-link" onclick="openTab(event, 'section2')">Students</button>
+          <button class="tab-link" onclick="openTab(event, 'section3')">Caregivers</button>
+        </div>
+
+        <div id="section1" class="tab-section" style="display:block;">
+          <!-- Content for Professionals -->
+          <p>Total Answers: 35</p>
+
+          <div class="pie-chart-row">
+            <!-- First chart -->
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">1. On average, how many patients do you take care of per shift?</p>
+                </div>
+                <canvas id="pieChart1" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot green"></span> 1-2 </div>
+                <div><span class="pie-dot blue"></span> 3-4 </div>
+                <div><span class="pie-dot yellow"></span> 5-6 </div>
+                <div><span class="pie-dot red"></span> >6 </div>
+                <div><span class="pie-dot purple"></span> N/A</div>
+              </div>
+            </div>
+
+            
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">2. Do you consider the ratio adequate for providing safe care?</p>
+                </div>
+                <canvas id="pieChart2" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+                <div><span class="pie-dot yellow"></span> N/A </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pie-chart-row" style="margin-top:2rem;">
+            <!-- Sidebar chart -->
+            <div class="bar-chart-group">
+              <div class="pie-statement-row">
+                <p class="pie-statement">3. Which functions should be implemented in the vest/app?</p>
+              </div>
+              <div class="bar-chart-layout">
+                <div class="bar-categories-abs">
+                  <span style="top: 13px;">Heart Rate Sensor</span>
+                  <span style="top: 35px;">Fall-Risk Detection</span>
+                  <span style="top: 57px;">Thermoneter</span>
+                  <span style="top: 79px;">Oximeter</span>
+                  <span style="top: 101px;">SOS Button</span>
+                  <span style="top: 123px;">Blood Pressure</span>
+                  <span style="top: 145px;">Blood Glucose</span>
+                  <span style="top: 167px;">Respiratory Rate</span>
+                </div>
+                <div class="bar-chart-canvas-wrapper">
+                  <canvas id="barChart1" width="400" height="180"></canvas>
+                  <div class="bar-percentages-abs">
+                    <span style="top: 13px;">(88.6%)</span>
+                    <span style="top: 35px;">(100%)</span>
+                    <span style="top: 57px;">(62.9%)</span>
+                    <span style="top: 79px;">(77.1%)</span>
+                    <span style="top: 101px;">(88.6%)</span>
+                    <span style="top: 123px;">(2.9%)</span>
+                    <span style="top: 145px;">(2.9%)</span>
+                    <span style="top: 167px;">(2.9%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie chart group -->
+            <div class="pie-chart-group" style="align-self: center; margin-top: 25px;">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">4. Would the vest/app help low-risk patients?</p>
+                </div>
+                <canvas id="pieChart3" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pie-chart-row" style="margin-top:2rem;">
+            <!--pie chart-->
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">5. Would the vest/app help increase hospital bed turnover?</p>
+                </div>
+                <canvas id="pieChart4" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+              </div>
+            </div>
+
+            <!--  pie chart -->
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">6. Would the vest/app help prevent HAIs?</p>
+                </div>
+                <canvas id="pieChart5" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pie-chart-row" style="margin-top:2rem;">
+            <!-- Pie chart -->
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">7. Would the vest/app reduce the stress of healthcare professionals?</p>
+                </div>
+                <canvas id="pieChart6" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+              </div>
+            </div>
+
+            <!-- Sidebar bar chart -->
+            <div class="bar-chart-group">
+              <div class="pie-statement-row">
+                <p class="pie-statement">8. What are your biggest concerns regarding the vest/app?</p>
+              </div>
+              <div class="bar-chart-layout">
+                <div class="bar-categories-abs" style="height: 140px;">
+                  <span style="top: 16px;">User Comfort</span>
+                  <span style="top: 39px;">User Privacy</span>
+                  <span style="top: 62px;">Accuracy</span>
+                  <span style="top: 85px;">False Alarms</span>
+                  <span style="top: 108px;">User Opt-In</span>
+                  <span style="top: 131px;">Don't Have Any</span>
+                </div>
+                <div class="bar-chart-canvas-wrapper" style="height: 140px; width: 400px;">
+                  <canvas id="barChart2" width="400" height="140"></canvas>
+                  <div class="bar-percentages-abs" style="height: 140px;">
+                    <span style="top: 16px;">(85.7%)</span>
+                    <span style="top: 39px;">(31.4%)</span>
+                    <span style="top: 62px;">(77.1%)</span>
+                    <span style="top: 85px;">(82.9%)</span>
+                    <span style="top: 108px;">(2.9%)</span>
+                    <span style="top: 131px;">(5.7%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section2" class="tab-section" style="display:none;">
+          <div class="student-tabs-vertical">
+            <div class="student-side-tabs">
+              <button class="student-tab-link active" data-student-tab="with-internship">With Internship</button>
+              <button class="student-tab-link" data-student-tab="without-internship">Without Internship</button>
+            </div>
+            <div class="student-tabs-content">
+              <div id="with-internship" class="student-tab-content" style="display:block;">
+                <p>Total Answers: 59</p>
+
+                <!-- First row -->
+                <div class="pie-chart-row">
+                  <!-- First chart -->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">1. On average, how many patients do you take care of per shift?</p>
+                      </div>
+                      <canvas id="studentPieChart1" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot green"></span> 1-2 </div>
+                      <div><span class="pie-dot blue"></span> 3-4 </div>
+                      <div><span class="pie-dot yellow"></span> 5-6 </div>
+                      <div><span class="pie-dot red"></span> >6 </div>
+                      <div><span class="pie-dot purple"></span> N/A</div>
+                    </div>
+                  </div>
+                  <!-- Second chart -->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">2. Do you consider the ratio adequate for providing safe care?</p>
+                      </div>
+                      <canvas id="studentPieChart2" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                      <div><span class="pie-dot yellow"></span> N/A </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pie-chart-row" style="margin-top:2rem;">
+                  <!-- Sidebar chart-->
+                  <div class="bar-chart-group">
+                    <div class="pie-statement-row">
+                      <p class="pie-statement">3. Which functions should be implemented in the vest/app?</p>
+                    </div>
+                    <div class="bar-chart-layout">
+                      <div class="bar-categories-abs">
+                        <span style="top: 13px;">Heart Rate Sensor</span>
+                        <span style="top: 40px;">Fall-Risk Detection</span>
+                        <span style="top: 70px;">Thermoneter</span>
+                        <span style="top: 100px;">Oximeter</span>
+                        <span style="top: 130px;">SOS Button</span>
+                        <span style="top: 160px;">Blood Pressure</span>
+                      </div>
+                      <div class="bar-chart-canvas-wrapper">
+                        <canvas id="studentBarChart1" width="400" height="180"></canvas>
+                        <div class="bar-percentages-abs">
+                          <span style="top: 13px;">(94.9%)</span>
+                          <span style="top: 43px;">(83.1%)</span>
+                          <span style="top: 73px;">(50.8%)</span>
+                          <span style="top: 103px;">(74.6%)</span>
+                          <span style="top: 133px;">(96.6%)</span>
+                          <span style="top: 163px;">(6.8%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pie chart-->
+                  <div class="pie-chart-group" style="align-self: center; margin-left: 5rem;">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">4. Would the vest/app help low-risk patients?</p></p>
+                      </div>
+                      <canvas id="studentPieChart3" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--pie charts -->
+                <div class="pie-chart-row" style="margin-top:2rem;">
+                  <!-- pie chart-->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">5. Would the vest/app help increase hospital bed turnover?</p>
+                      </div>
+                      <canvas id="studentPieChart4" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                    </div>
+                  </div>
+
+                  <!-- pie chart-->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">6. Would the vest/app help prevent HAIs?</p>
+                      </div>
+                      <canvas id="studentPieChart5" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fourth row: Pie chart-->
+                <div class="pie-chart-row" style="margin-top:2rem;">
+                  <!-- Pie chart-->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">7. Would the vest/app reduce the stress of healthcare professionals?</p>
+                      </div>
+                      <canvas id="studentPieChart6" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                    </div>
+                  </div>
+
+                  <!-- Sidebar bar chart -->
+                  <div class="bar-chart-group">
+                    <div class="pie-statement-row">
+                      <p class="pie-statement">8. What are your biggest concerns regarding the vest/app?</p>
+                    </div>
+                    <div class="bar-chart-layout">
+                      <div class="bar-categories-abs" style="height: 140px;">
+                          <span style="top: 16px;">User Comfort</span>
+                          <span style="top: 39px;">User Privacy</span>
+                          <span style="top: 62px;">Accuracy</span>
+                          <span style="top: 85px;">False Alarms</span>
+                          <span style="top: 108px;">User Opt-In</span>
+                          <span style="top: 131px;">Don't Have Any</span>
+                      </div>
+                      <div class="bar-chart-canvas-wrapper" style="height: 140px; width: 400px;">
+                        <canvas id="studentBarChart2" width="400" height="140"></canvas>
+                        <div class="bar-percentages-abs" style="height: 140px;">
+                          <span style="top: 16px;">(74.6%)</span>
+                          <span style="top: 39px;">(23.7%)</span>
+                          <span style="top: 62px;">(74.6%)</span>
+                          <span style="top: 85px;">(67.8%)</span>
+                          <span style="top: 108px;">(1.7%)</span>
+                          <span style="top: 131px;">(0%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="without-internship" class="student-tab-content" style="display:none;">
+                <!-- Content for students without internship -->
+                <p>Total Answers: 8</p>
+                 <!-- First row-->
+                <div class="pie-chart-row" style="margin-top:2rem;">
+                  <!-- Sidebar bar chart -->
+                  <div class="bar-chart-group">
+                    <div class="pie-statement-row">
+                      <p class="pie-statement">1. Which functions should be implemented in the vest/app?</p>
+                    </div>
+                    <div class="bar-chart-layout">
+                      <div class="bar-categories-abs" style="height: 140px;">
+                        <span style="top: 13px;">Heart Rate Sensor</span>
+                        <span style="top: 40px;">Fall-Risk Detection</span>
+                        <span style="top: 70px;">Thermoneter</span>
+                        <span style="top: 100px;">Oximeter</span>
+                        <span style="top: 130px;">SOS Button</span>
+                      </div>
+                      <div class="bar-chart-canvas-wrapper" style="height: 140px; width: 400px;">
+                        <canvas id="studentNoInternBar1" width="400" height="140"></canvas>
+                        <div class="bar-percentages-abs" style="height: 140px;">
+                          <span style="top: 16px;">(87.5%)</span>
+                          <span style="top: 46px;">(75%)</span>
+                          <span style="top: 76px;">(75%)</span>
+                          <span style="top: 106px;">(75%)</span>
+                          <span style="top: 136px;">(100%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pie chart -->
+                  <div class="pie-chart-group">
+                    <div class="pie-chart-main">
+                      <div class="pie-statement-row">
+                        <p class="pie-statement">2. Would the vest/application help low-risk patients?</p>
+                      </div>
+                      <canvas id="studentNoInternPie1" width="170" height="170"></canvas>
+                    </div>
+                    <div class="pie-captions">
+                      <div><span class="pie-dot blue"></span> Yes </div>
+                      <div><span class="pie-dot red"></span> No </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Second row-->
+                <div class="pie-chart-row" style="margin-top:2rem;">
+                  <div class="bar-chart-group">
+                    <div class="pie-statement-row">
+                      <p class="pie-statement">3. What are your biggest concerns regarding the vest/app?</p>
+                    </div>
+                    <div class="bar-chart-layout">
+                      <div class="bar-categories-abs" style="height: 140px;">
+                          <span style="top: 16px;">User Comfort</span>
+                          <span style="top: 39px;">User Privacy</span>
+                          <span style="top: 62px;">Accuracy</span>
+                          <span style="top: 85px;">False Alarms</span>
+                          <span style="top: 108px;">Cost/Accessibility</span>
+                          <span style="top: 131px;">Don't Have Any</span>
+                      </div>
+                      <div class="bar-chart-canvas-wrapper" style="height: 140px; width: 400px;">
+                        <canvas id="studentNoInternBar2" width="400" height="140"></canvas>
+                        <div class="bar-percentages-abs" style="height: 140px;">
+                          <span style="top: 20px;">(87.5%)</span>
+                          <span style="top: 43px;">(0%)</span>
+                          <span style="top: 63px;">(75%)</span>
+                          <span style="top: 83px;">(75%)</span>
+                          <span style="top: 103px;">(12.5%)</span>
+                          <span style="top: 123px;">(0%)</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="section3" class="tab-section">
+          <!-- Content for Caregivers -->
+          <p>Total Answers: 2</p>
+
+          <div class="pie-chart-row" style="margin-top:2rem;">
+            <!-- Pie chart -->
+            <div class="pie-chart-group">
+              <div class="pie-chart-main">
+                <div class="pie-statement-row">
+                  <p class="pie-statement">Would you feel safer if your relative/patient wore the vest upon discharge?</p>
+                </div>
+                <canvas id="caregiverPie1" width="170" height="170"></canvas>
+              </div>
+              <div class="pie-captions">
+                <div><span class="pie-dot blue"></span> Yes </div>
+                <div><span class="pie-dot red"></span> No </div>
+              </div>
+            </div>
+            <!-- Sidebar bar chart -->
+            <div class="bar-chart-group">
+              <div class="pie-statement-row">
+                <p class="pie-statement">2. Which functions should be implemented in the vest/app?</p>
+              </div>
+              <div class="bar-chart-layout">
+                <div class="bar-categories-abs" style="height: 118px;">
+                  <span style="top: 13px;">Heart Rate Sensor</span>
+                        <span style="top: 35px;">Fall-Risk Detection</span>
+                        <span style="top: 57px;">Thermoneter</span>
+                        <span style="top: 79px;">Oximeter</span>
+                        <span style="top: 101px;">SOS Button</span>
+                </div>
+                <div class="bar-chart-canvas-wrapper" style="height: 118px; width: 400px;">
+                  <canvas id="caregiverBar1" width="400" height="118px"></canvas>
+                  <div class="bar-percentages-abs" style="height: 118px;">
+                    <span style="top: 16px;">(100%)</span>
+                    <span style="top: 39px;">(100%)</span>
+                    <span style="top: 62px;">(50%)</span>
+                    <span style="top: 85px;">(50%)</span>
+                    <span style="top: 108px;">(100%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second row -->
+          <div class="pie-chart-row" style="margin-top:2rem;">
+            <div class="bar-chart-group">
+              <div class="pie-statement-row">
+                <p class="pie-statement">3. What are your biggest concerns regarding the vest/app?</p>
+              </div>
+              <div class="bar-chart-layout">
+                <div class="bar-categories-abs" style="height: 118px;">
+                  <span style="top: 16px;">User Comfort</span>
+                  <span style="top: 39px;">User Privacy</span>
+                  <span style="top: 62px;">Accuracy</span>
+                  <span style="top: 85px;">False Alarms</span>
+                  <span style="top: 105px;">Don't Have Any</span>
+                </div>
+                <div class="bar-chart-canvas-wrapper" style="height: 11upx; width: 400px;">
+                  <canvas id="caregiverBar2" width="400" height="118px"></canvas>
+                  <div class="bar-percentages-abs" style="height: 118px;">
+                    <span style="top: 16px;">(100%)</span>
+                    <span style="top: 39px;">(0%)</span>
+                    <span style="top: 62px;">(50%)</span>
+                    <span style="top: 85px;">(100%)</span>
+                    <span style="top: 108px;">(0%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    </section>    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>MediVest aims to revolutionize patient care by providing continuous monitoring solutions for low-risk patients.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> medivestproject@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Instituto Superior Técnico, Lisbon, Portugal</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MediVest | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        
+        
+        const ctx1 = document.getElementById('pieChart1').getContext('2d');
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: ['1-2', '3-4', '5-6', '>6', 'N/A'],
+                datasets: [{
+                    data: [1, 1, 4, 28, 1],
+                    backgroundColor: [
+                        '#50C878', // green
+                        '#347ce7', // blue
+                        '#FDDA0D', // yellow
+                        '#EE4B2B',  // red
+                        '#a259e6', // purple
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { 
+              plugins: { legend: { display: false } },
+              animation: false
+            }
+        });
+
+        const ctx2 = document.getElementById('pieChart2').getContext('2d');
+        new Chart(ctx2, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No', 'N/A'],
+                datasets: [{
+                    data: [3, 31, 1],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                        '#FDDA0D', // yellow
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctx3 = document.getElementById('pieChart3').getContext('2d');
+        new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [35, 0],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctx4 = document.getElementById('pieChart4').getContext('2d');
+        new Chart(ctx4, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [30, 5],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        const ctx5 = document.getElementById('pieChart5').getContext('2d');
+        new Chart(ctx5, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [25, 10],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctx6 = document.getElementById('pieChart6').getContext('2d');
+        new Chart(ctx6, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [100, 0],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxBar2 = document.getElementById('barChart2').getContext('2d');
+        new Chart(ctxBar2, {
+            type: 'bar',
+            data: {
+                labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E', 'Category F'],
+                datasets: [{
+                    data: [30, 11, 27, 29, 1, 2],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 35
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        
+        const barColors = [
+            '#347ce7', // blue
+            '#347ce7', // green
+            '#347ce7', // orange
+            '#347ce7', // purple
+            '#347ce7', // gray
+            '#347ce7', // red
+            '#347ce7', // yellow
+            '#347ce7'  // teal
+        ];
+        const barLabels = [
+            'Category 1', 'Category 2', 'Category 3', 'Category 4',
+            'Category 5', 'Category 6', 'Category 7', 'Category 8'
+        ];
+        const barData = [31, 35, 22, 27, 31, 1, 1, 1];
+
+        const ctxBar = document.getElementById('barChart1').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: barLabels,
+                datasets: [{
+                    data: barData,
+                    backgroundColor: barColors,
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 40
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Tab functionality
+        function openTab(evt, tabId) {
+            // Hide all tab sections
+            document.querySelectorAll('.tab-section').forEach(sec => sec.style.display = 'none');
+            // Remove active from all tab links
+            document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+            // Show selected tab and set active
+            document.getElementById(tabId).style.display = 'block';
+            evt.currentTarget.classList.add('active');
+        }
+
+        // Student tab functionality
+        document.querySelectorAll('.student-tab-link').forEach(tab => {
+            tab.addEventListener('click', function() {
+                const target = this.getAttribute('data-student-tab');
+                // Hide all student tab contents
+                document.querySelectorAll('.student-tab-content').forEach(content => {
+                    content.style.display = 'none';
+                });
+                // Remove active class from all student tabs
+                document.querySelectorAll('.student-tab-link').forEach(t => {
+                    t.classList.remove('active');
+                });
+                // Show selected student tab content
+                document.getElementById(target).style.display = 'block';
+                // Add active class to the clicked tab
+                this.classList.add('active');
+            });
+        });
+
+        // Student Pie Chart 1
+        const ctxStudent1 = document.getElementById('studentPieChart1').getContext('2d');
+        new Chart(ctxStudent1, {
+            type: 'pie',
+            data: {
+                labels: ['1-2', '3-4', '5-6', '>6', 'N/A'],
+                datasets: [{
+                    data: [23, 16, 6, 5, 9],
+                    backgroundColor: [
+                        '#50C878', // green
+                        '#347ce7', // blue
+                        '#FDDA0D', // yellow
+                        '#EE4B2B',  // red
+                        '#a259e6', // purple
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        // Student Pie Chart 2
+        const ctxStudent2 = document.getElementById('studentPieChart2').getContext('2d');
+        new Chart(ctxStudent2, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'NO', 'N/A'],
+                datasets: [{
+                    data: [26, 23, 10],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                        '#FDDA0D', // yellow
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudentBar1 = document.getElementById('studentBarChart1').getContext('2d');
+        new Chart(ctxStudentBar1, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Category 1', 'Category 2', 'Category 3',
+                    'Category 4', 'Category 5', 'Category 6'
+                ],
+                datasets: [{
+                    data: [56, 49, 30, 44, 57, 4],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 40
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        
+        const ctxStudentPie3 = document.getElementById('studentPieChart3').getContext('2d');
+        new Chart(ctxStudentPie3, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [55, 4],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudent4 = document.getElementById('studentPieChart4').getContext('2d');
+        new Chart(ctxStudent4, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [44, 15],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudent5 = document.getElementById('studentPieChart5').getContext('2d');
+        new Chart(ctxStudent5, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [38, 21],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudent6 = document.getElementById('studentPieChart6').getContext('2d');
+        new Chart(ctxStudent6, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [53, 6],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudentBar2 = document.getElementById('studentBarChart2').getContext('2d');
+        new Chart(ctxStudentBar2, {
+            type: 'bar',
+            data: {
+                labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E', 'Category F'],
+                datasets: [{
+                    data: [44, 14, 44, 40, 1, 0],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 35
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        
+        const ctxStudentNoInternBar1 = document.getElementById('studentNoInternBar1').getContext('2d');
+        new Chart(ctxStudentNoInternBar1, {
+            type: 'bar',
+            data: {
+                labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
+                datasets: [{
+                    data: [7, 6, 6, 6, 8],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 35
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+      
+        const ctxStudentNoInternPie1 = document.getElementById('studentNoInternPie1').getContext('2d');
+        new Chart(ctxStudentNoInternPie1, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [7, 1],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxStudentNoInternBar2 = document.getElementById('studentNoInternBar2').getContext('2d');
+        new Chart(ctxStudentNoInternBar2, {
+            type: 'bar',
+            data: {
+                labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4', 'Category 5', 'Category 6'],
+                datasets: [{
+                    data: [7, 0, 6, 6, 1, 0],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 30
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        // Caregiver Pie Chart 1
+        const ctxCaregiverPie1 = document.getElementById('caregiverPie1').getContext('2d');
+        new Chart(ctxCaregiverPie1, {
+            type: 'pie',
+            data: {
+                labels: ['Yes', 'No'],
+                datasets: [{
+                    data: [2, 0],
+                    backgroundColor: [
+                        '#347ce7', // blue
+                        '#EE4B2B',  // red
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: { plugins: { legend: { display: false } },
+            animation: false
+          }
+        });
+
+        
+        const ctxCaregiverBar1 = document.getElementById('caregiverBar1').getContext('2d');
+        new Chart(ctxCaregiverBar1, {
+            type: 'bar',
+            data: {
+                labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
+                datasets: [{
+                    data: [2, 2, 1, 1, 2],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 35
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        
+        const ctxCaregiverBar2 = document.getElementById('caregiverBar2').getContext('2d');
+        new Chart(ctxCaregiverBar2, {
+            type: 'bar',
+            data: {
+                labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
+                datasets: [{
+                    data: [2, 0, 1, 2, 0],
+                    backgroundColor: '#347ce7',
+                    borderRadius: 2,
+                    borderSkipped: false,
+                    barThickness: 10
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { enabled: false }
+                },
+
+                animation: false,
+
+                scales: {
+                    x: {
+                        display: false,
+                        min: 0,
+                        max: 35
+                    },
+                    y: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

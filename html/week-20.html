@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vest for Low-Risk Hospital Patients - Remote monitoring solution for safer and shorter hospital stays">
+    <title>Week 20 • MediVest</title>
+    <link rel="stylesheet" href="../css/global_style.css">
+    <link rel="stylesheet" href="../css/week-20_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <header class="header">
+        <a href="home.html"><img src="../images/ist_logo_white.png" alt="ist logo"></a>
+        <nav class="header-right">
+            <a href="home.html" class="interactive">Home</a>
+            <a href="about.html" class="interactive">About</a>
+            <a href="team.html" class="interactive">Team</a>
+            <a href="blog.html" class="interactive">Blog</a>
+            <a href="contact.html" class="interactive">Contact</a>
+            <div class="openbtn">&#9776;</div>
+            <div id="mySidepanel" class="sidepanel">
+                <a href="interviews.html" class="interactive">Interviews</a>
+                <a href="questionnaire.html" class="interactive">Questionnaire</a>
+                <a href="pitch-deck.html" class="interactive">Pitch Deck</a>
+                <a href="gallery.html" class="interactive">Gallery</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container">
+        <div class="week-container">
+            <h1>Week 20</h1>
+        </div>
+
+        <div class="slide-wrapper">
+            <div class="slider two-column-layout">
+                <div class="slider-text">
+                    <h2>Fall Detection Parameters</h2>
+                    <p>
+                        One of the team's <b>main concerns</b> was <b>testing fall detection</b> while wearing the vest, as it could <b>damage connections or</b> even <b>break components</b>.
+                         To avoid that risk, we <b>started by testing</b> the gyroscope separately on a <b>development board</b>.
+                    </p>
+                    <ol>
+                        <li>We <b>simulated a small fall</b> from about 30 cm. For this, we <b>adjusted the fall detection thresholds to match</b> a light fall. The <b>free fall</b> was considered <b>valid</b> when the gyroscope reading dropped <b>below 3g</b>
+                             (ideally between 0g and 2g), and <b>impact was set around 15g</b> (a real fall is closer to 25g)</li>
+                             <br>
+                        <li>After confirming that the simulated fall triggered detection correctly, we <b>adjusted the thresholds again to represent a real fall</b>. We also <b>fine-tuned</b> other values like <b>fall duration</b>,
+                             <b>free fall duration, and how long the person stays still after the fall</b></li>
+                    </ol>
+                    <p>
+                       <b>To safely demonstrate</b> the fall detection at ElectroDay, we <b>implemented a "Fall Test Mode"</b> in the vest. This mode is <b>activated by 
+                       holding down the emergency button</b> on the vest <b>for more than 5 seconds</b>. Once activated, it <b>allows us to simulate a very small fall</b>,
+                        just enough to trigger the system, <b>without putting the vest at risk</b>. This way, we can show how the alert appears on the medical central and
+                         app without needing a real impact.
+                    </p>
+                </div>
+                <div class="slider-media">
+                    <img src="../images/fall_detection_comparison.png" alt="Fall Detection Parameters">
+                    <div class="description"><b>Comparison of fall detection parameters between simulated testing conditions and real-world scenarios</b></div>
+                </div>
+            </div>
+        </div>
+        
+        <a href="../html/blog.html" class="cta-button">Go Back to Blog</a>
+    </section>
+
+    
+    <button class="back-to-top" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>MediVest aims to revolutionize patient care by providing continuous monitoring solutions for low-risk patients.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> medivestproject@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-map-marker-alt"></i> Instituto Superior Técnico, Lisbon, Portugal</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MediVest | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script>
+        
+        // Scroll progress indicator
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.transform = `scaleX(${scrollPercent / 100})`;
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Prevent default behavior for anchor links
+        document.querySelectorAll('.slider-nav a').forEach((a, i, all) => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Remove active from all
+                all.forEach(btn => btn.classList.remove('active'));
+                // Add active to clicked
+                a.classList.add('active');
+                const slider = document.querySelector('.slider');
+                const slide = slider.querySelectorAll('img')[i];
+                if (slide) {
+                    slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+    </script>
+</body>
+</html>
