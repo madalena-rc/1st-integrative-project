@@ -1,5 +1,5 @@
 # 1st-integrative-project
-[Website](https://web.tecnico.ulisboa.pt/ist1103289/) of 1st cycle integrative project in Electrical and Computer Engineering
+Website for 1st cycle integrative project in Electrical and Computer Engineering
 
 ## About MediVest
 MediVest aims to reduce hospital stays by enabling safe, remote monitoring for low-risk patients
